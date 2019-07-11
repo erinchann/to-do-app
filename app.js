@@ -1,6 +1,7 @@
 function onReady(){
   const ADD_TODO_FORM = document.getElementById('addToDoForm');
   let toDos = [];
+  let id = 0;
 
   function renderTheUI(){
     const TODO_LIST = document.getElementById('toDoList');
@@ -35,9 +36,11 @@ function onReady(){
     if(!NEW_TODO_TEXT.value){ return; }
     toDos.push({
       title: NEW_TODO_TEXT.value,
-      complete: false
+      complete: false,
+      id: id
     });
 
+    id++;
 
     NEW_TODO_TEXT.value = '';
     renderTheUI();
