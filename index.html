@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html class="mdl-js"
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>To-Do App</title>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do App</title>
 
-    <!-- Material Design Lite -->
-   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-lime.min.css">
-   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-   <!-- Custom Styles -->
-      <link rel="stylesheet" href="styles/style.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles/style.css">
 
-  </head>
-  <body>
-    <header class="mdl-layout__header mdl-layout__header--transparent">
-      <h1>To-Do App</h1>
-    </header>
-     <main class="mdl-layout__content mdl-grid">
+</head>
+<body>
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <h1>To-Do App</h1>
+  </header>
+  <main class="mdl-layout__content mdl-grid">
+    <div class="mdl-grid mdl-cell mdl-cell--12-col">
+      <form id="addToDoForm">
+        <label for="newToDoText">New To-Do:</label>
+        <input type='text' id="newToDoText">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          Add To-Do!
+        </button>
+
+      </form>
+    </div>
+    <main class="mdl-layout__content mdl-grid">
       <div class="mdl-grid mdl-cell mdl-cell--12-col">
-        <form id="addToDoForm">
-            <label for="newToDoText">New To-Do:</label>
-            <input type='text' id="newToDoText">
-            <button type="submit">Add To-Do!</button>
-        </form>
-      </div>
-
-      <div class="mdl-cell mdl-cell--12-col">
-        <ul id="toDoList">
-          <div class="mdl-cell mdl-cell--6-col">
-            <li>
-            </li>
-          </div>
+        <ul id="toDoList" class="demo-list-control mdl-list">
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+            </span>
+            <span class="mdl-list__item-secondary-action">
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
+                <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" checked />
+              </label>
+            </span>
+          </li>
         </ul>
       </div>
     </main>

@@ -51,6 +51,13 @@ function onReady(){
   renderTheUI();
 }
 
+let task = document.querySelector("li");
+task.classList.add("mdl-list__item-primary-content");
+
+let complete = document.querySelector("input");
+complete.classList.add("mdl-list__item-secondary-action");
+
+
 window.onload = function() {
   onReady();
 }
