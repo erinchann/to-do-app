@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="mdl-js"
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>To-Do App</title>
@@ -9,22 +9,31 @@
    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
    <!-- Custom Styles -->
-      <link rel="stylesheet" href="styles/main.css">
+      <link rel="stylesheet" href="styles/style.css">
 
   </head>
   <body>
     <header class="mdl-layout__header mdl-layout__header--transparent">
       <h1>To-Do App</h1>
     </header>
+     <main class="mdl-layout__content mdl-grid">
+      <div class="mdl-grid mdl-cell mdl-cell--12-col">
+        <form id="addToDoForm">
+            <label for="newToDoText">New To-Do:</label>
+            <input type='text' id="newToDoText">
+            <button type="submit">Add To-Do!</button>
+        </form>
+      </div>
 
-    <form id="addToDoForm">
-      <label for="newToDoText">New To-Do:</label>
-      <input type='text' id="newToDoText">
-      <button type="submit">Add To-Do!</button>
-    </form>
-
-    <ul id="toDoList">
-    </ul>
+      <div class="mdl-cell mdl-cell--12-col">
+        <ul id="toDoList">
+          <div class="mdl-cell mdl-cell--6-col">
+            <li>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </main>
 
     <script src="app.js"></script>
   </body>
