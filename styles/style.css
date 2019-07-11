@@ -11,15 +11,21 @@ h1 {
 }
 
 form {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 label {
   padding-right: 10px;
+  color: indianred;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid indianred;
 }
 
 main {
-  max-width: 800px;
+  max-width: 400px;
 }
 
 ul {
